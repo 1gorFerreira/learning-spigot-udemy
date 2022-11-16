@@ -12,17 +12,6 @@ public final class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this, this);
-    }
-
-    @EventHandler
-    public void onPlayerMove(PlayerMoveEvent e){
-        e.setCancelled(true);
-        e.getPlayer().sendMessage(ChatColor.RED + "Stop moving! You are froozen.");
-    }
-
-    @EventHandler
-    public void onPlayerEggThrow(PlayerEggThrowEvent e){
-        e.getPlayer().sendMessage("Youjust throw an egg!");
+        getCommand("heal").setExecutor(new HealCommand());
     }
 }
