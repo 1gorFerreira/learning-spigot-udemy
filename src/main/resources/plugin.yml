@@ -1,0 +1,6 @@
+name: TestPlugin
+version: '${project.version}'
+main: com.igor.test.Main
+api-version: 1.16
+authors: [ Igor ]
+description: Cool test plugin
