@@ -5,4 +5,4 @@ api-version: 1.16
 authors: [ Igor ]
 description: Cool test plugin
 commands:
-  config:
+  test:
