@@ -12,6 +12,6 @@ public final class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        getCommand("heal").setExecutor(new HealCommand());
+        getCommand("test").setExecutor(new TestCommand());
     }
 }

@@ -5,15 +5,18 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class HealCommand implements CommandExecutor {
+public class TestCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
+        //Command: /test hello
         if (sender instanceof Player){
-            Player player = (Player) sender;
-            player.sendMessage("Your health has been restored");
-            player.setHealth(20);
+            //if first argument is equal to 'hello', then we'll send hello back
+            if(args.length == 1){
+                if(args[0].equalsIgnoreCase("hello")){
+                    ((Player) sender).sendMessage("Hello my friend!");
+                }
+            }
         }
 
         return false;
