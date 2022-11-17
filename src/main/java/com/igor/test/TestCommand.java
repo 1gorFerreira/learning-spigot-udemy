@@ -9,14 +9,11 @@ public class TestCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        //Command: /test hello
+
         if (sender instanceof Player){
-            //if first argument is equal to 'hello', then we'll send hello back
-            if(args.length == 1){
-                if(args[0].equalsIgnoreCase("hello")){
-                    ((Player) sender).sendMessage("Hello my friend!");
-                }
-            }
+            ((Player) sender).sendMessage("No, this is console only!");
+        } else {
+            System.out.println("Hello you have messaged the console!");
         }
 
         return false;
